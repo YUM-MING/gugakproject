@@ -1,0 +1,96 @@
+<!-- templates/player.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>곡 재생 - 국악 추천</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; text-align: center; margin-top: 40px; }
+    .player-box {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+    }
+    .controls button {
+      margin: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background-color: #666;
+    }
+    .related {
+      margin-top: 30px;
+    }
+    .related ul {
+      list-style: none;
+      padding: 0;
+    }
+    .related li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="player-box">
+    <h2 id="song-title">🎵 {{ title }}</h2>
+
+    <!-- 오디오 플레이어 -->
+    <audio id="audio-player" controls style="width: 100%;">
+      <source id="audio-source" src="/static/music/{{ filename }}.wav" type="audio/wav">
+      지원되지 않는 브라우저입니다.
+    </audio>
+
+    <div class="controls">
+      <button onclick="prevTrack()">⏮ 이전</button>
+      <button onclick="playPause()">▶️ / ⏸</button>
+      <button onclick="nextTrack()">⏭ 다음</button>
+      <button onclick="downloadMP3()">⬇ MP3 다운로드</button>
+      <button onclick="showInfo()">ℹ 곡 정보</button>
+    </div>
+  </div>
+
+  <div class="related">
+    <h3>📋 관련 자동 플레이리스트</h3>
+    <ul>
+      <li>🎵 관련 곡 1</li>
+      <li>🎵 관련 곡 2</li>
+      <li>🎵 관련 곡 3</li>
+    </ul>
+  </div>
+
+  <script>
+    function playPause() {
+      const player = document.getElementById("audio-player");
+      if (player.paused) player.play();
+      else player.pause();
+    }
+
+    function prevTrack() {
+      alert("이전 곡 기능은 아직 구현되지 않았습니다.");
+    }
+
+    function nextTrack() {
+      alert("다음 곡 기능은 아직 구현되지 않았습니다.");
+    }
+
+    function downloadMP3() {
+      const filename = "{{ filename }}";
+      window.location.href = `/static/music/${filename}.wav`;
+    }
+
+    function showInfo() {
+      const title = "{{ title }}";
+      alert(`${title}에 대한 상세 정보는 추후 제공될 예정입니다.`);
+    }
+  </script>
+
+</body>
+</html>

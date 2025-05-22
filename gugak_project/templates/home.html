@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>국악 추천 시스템</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; text-align: center; margin-top: 100px; }
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎶 국악 추천 시스템 🎶</h1>
+  <form action="{% url 'recommend_view' %}" method="get">
+    <input type="text" name="query" placeholder="예: 신나는 가야금 노래 듣고싶어">
+    <button type="submit">추천받기 🔍</button>
+  </form>  
+
+</body>
+</html>

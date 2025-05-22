@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>추천 결과 - 국악 추천 시스템</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; text-align: center; margin-top: 50px; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background-color: #f5f5f5;
+      margin: 10px auto;
+      padding: 15px;
+      width: 400px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    li:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎼 ‘{{ query }}’에 대한 추천 목록</h2>
+
+  <ul id="recommendation-list">
+    {% if results %}
+      {% for song in results %}
+        <li onclick="goToPlayerPage('{{ song.filename|urlencode }}')">{{ song.title }}</li>
+      {% endfor %}
+  
+    {% else %}
+      <li>❗ 조건에 맞는 추천 결과가 없습니다.</li>
+    {% endif %}
+  </ul>
+
+  <a href="/">← 홈으로 돌아가기</a>
+
+  <script>
+    function goToPlayerPage(title) {
+      // player.html로 곡명을 쿼리파라미터로 넘김
+      window.location.href = `/player/?song=${encodeURIComponent(title)}`;
+    }
+  </script>
+
+</body>
+</html>
