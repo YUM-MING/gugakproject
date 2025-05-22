@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/images/favicon.png">
+
+    <title>BIRP! Indie Playlists, New Music Blog, Music Videos, Latest News &amp; More!</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/jquery.fullwidthaudioplayer.min.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="stylesheet" href="/pagination/public/css/zebra_pagination.css" type="text/css">
+<link rel='stylesheet' href='/css/nprogress.css'/>
+<link rel='stylesheet' href='/css/rrssb.css'/>
+<link rel="stylesheet" href="/rating/rating.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src='/js/nprogress.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ajaxify/6.6.2/ajaxify.min.js" type="text/javascript"></script>
+
+  </head>
+
+  <body>
+    
+<nav>
+  	<ul class="topnav" id="myTopnav">
+	  <li class="logo"><a href="/"><img src="/hansery.png"></a></li>
+	  <li><a class="menu-itm" href="/playlist">Playlists</a></li>
+	  <li><a class="menu-itm" href="https://www.youtube.com/@gugak1951" target="_blank">YouTube Channel</a></li>
+	  <li><a class="menu-itm" target="_blank" href="https://archive.gugak.go.kr/portal/main">Archive</a></li>
+	  <li><a class="menu-itm" target="_blank" href="https://www.gugak.go.kr/site/main/index001">Center</a></li>
+	  <li><a class="menu-itm" href="/about">About</a></li>
+	  <li><a class="menu-itm" href="/search"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+	  <li id="login"><a id="loginBtn" class="login-btn" role="button">Login / Signup</a></li>
+	  <li class="icon">
+	    <a id="mobi-dropdown" href="javascript:void(0);" onclick="menu()">&#9776;</a>
+	  </li>
+	</ul>
+</nav>    
+    <div id="header-container">
+        <div class="header-title container">
+            <form role="form" name="search" action="search" method="POST">
+                <button type="submit" id="search-btn" class="btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <div id="search-top">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Enter the recommendation you want">
+                </div>
+            </form>
+        </div>
+    </div>
+        <div class="header" style="background-image: url('https://birpalbumart.s3.amazonaws.com/albumart/may2025.jpg')">
+        </div>
+    </div>
+    <div class="container main-content no-top-margin">
+        <div id="sidebar">
+	<div id="social-buttons">
+		<a href="http://www.twitter.com/birp" target="_blank">
+			<div class="social-button twitter-btn">
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+			</div>
+		</a>
+		<a href="http://www.facebook.com/birp.fm" target="_blank">
+			<div class="social-button facebook-btn">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+			</div>
+		</a>
+		<a href="http://www.instagram.com/birpfm" target="_blank">
+			<div class="social-button instagram-btn">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+			</div>
+		</a>
+		<a href="http://www.soundcloud.com/birp" target="_blank">
+			<div class="social-button soundcloud-btn">
+				<i class="fa fa-soundcloud" aria-hidden="true"></i>
+			</div>
+		</a>
+		<a href="https://www.youtube.com/channel/UC-HHJWCzskrsPdEjYulBg4w?sub_confirmation=1" target="_blank">
+			<div class="social-button youtube-btn">
+				<i class="fa fa-youtube" aria-hidden="true"></i>
+			</div>
+		</a>
+	</div>
+	<a href="https://groover.co/band/signup/referral/influencer/3265/?utm_source=widget&utm_medium=widget_banner&utm_campaign=0.birpfm&widget_id=3265" target="_blank">
+		<div class="submithub">
+			Send us your music
+		</div>
+	</a>
+	<div class="sidebar-ad">
+		<div style="overflow:hidden;">
+			<a href="http://www.vinylpost.co" target="_blank"><img src="https://birpalbumart.s3.amazonaws.com/vinyl-post-gif.gif"></a>
+		</div>
+	</div>
+	<div id="wavo">
+		<div id="wb-ad-grid"></div>
+	</div>
+	<script>
+		var wb = window.wb || (window.wb = {});
+		wb.q || (wb.q = []);
+		wb.q.push(['addGrid', {siteId: '751981', id : "wb-ad-grid"}])
+	</script>
+	<script async src='https://d362g9pp4yoj7y.cloudfront.net/'></script>
+</div>        <div id="main">
+            <h2 class="more no-top-margin"><a href="/playlist">Latest Playlists</a></h2>
+            <div>
+            <div class="playlist-info-fp" id="playlist-fp-1">
+                        <a href="/playlist/2025/may-2025">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/may2025.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2025/may-2025">
+                            <h2 class="no-top-margin center-text">May 2025</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-2">
+                        <a href="/playlist/2025/april-2025">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/april2025.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2025/april-2025">
+                            <h2 class="no-top-margin center-text">April 2025</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-3">
+                        <a href="/playlist/2025/march-2025">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/march2025.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2025/march-2025">
+                            <h2 class="no-top-margin center-text">March 2025</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-1">
+                        <a href="/playlist/2025/february-2025">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/february2025.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2025/february-2025">
+                            <h2 class="no-top-margin center-text">February 2025</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-2">
+                        <a href="/playlist/2024/best-of-2024">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/bestof2024.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2024/best-of-2024">
+                            <h2 class="no-top-margin center-text">Best of 2024</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-3">
+                        <a href="/playlist/2024/december-2024">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/december2024.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2024/december-2024">
+                            <h2 class="no-top-margin center-text">December 2024</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-1">
+                        <a href="/playlist/2024/november-2024">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/november2024.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2024/november-2024">
+                            <h2 class="no-top-margin center-text">November 2024</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-2">
+                        <a href="/playlist/2024/october-2024">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/october2024.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2024/october-2024">
+                            <h2 class="no-top-margin center-text">October 2024</h2>
+                        </a>
+                    </div><div class="playlist-info-fp" id="playlist-fp-3">
+                        <a href="/playlist/2024/september-2024">
+                            <img class="playlist-art" src="https://birpalbumart.s3.amazonaws.com/albumart/september2024.jpg">
+                        </a>
+                        <br>
+                        <a href="/playlist/2024/september-2024">
+                            <h2 class="no-top-margin center-text">September 2024</h2>
+                        </a>
+                    </div>            </div>
+        </div>
+        <div id="fap"></div>
+    </div><!-- /.container -->
+    <div class="footer">
+	<img class="footer-logo" src="https://birpalbumart.s3.amazonaws.com/birp-logo.png">
+	<br>
+	<a class="footer-link" href="/songs">Songs</a>
+	<a class="footer-link" href="/videos">Videos</a>
+	<a class="footer-link" href="/playlist">Playlists</a>
+	<a class="footer-link" href="/news">News</a>
+	<a class="footer-link" href="http://birp.bigcartel.com" target="_blank">Store</a>
+	<a class="footer-link" href="/about">About</a>
+	<a class="footer-link" href="/privacy-policy">Privacy Policy</a>
+	<br>
+	©BIRP! 2025 (Formerly Blalock's Indie/Rock Playlist)
+	<br>
+	<div id="footer-social">
+		<a class="social-btn" href="http://www.facebook.com/birp.fm" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+		<a class="social-btn" href="http://www.twitter.com/birp" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+		<a class="social-btn" href="http://www.snapchat.com/add/birp.fm" target="_blank"><i class="fa fa-snapchat-square" aria-hidden="true"></i></a>
+		<a class="social-btn" href="http://www.instagram.com/birpfm" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	</div>
+</div>
+
+<!-- The Modal -->
+<div id="loginModal" class="modal">
+
+  <!-- Modal content -->
+    <div class="modal-content">
+	  <div class="modal-header">
+	    <span class="close">&times;</span>
+	    <h2 class="no-top-margin no-bottom-margin">Login/Register</h2>
+	  </div>
+	  <div class="modal-body">
+		<form action="/login-check.php" method="POST" class="form-horizontal" role="form">
+		  <div class="form-group">
+		    <label for="username" class="control-label">Username</label>
+		    <div>
+		      <input type="text" class="form-control" id="username" name="username">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputPassword3" class="control-label">Password</label>
+		    <div>
+		      <input type="password" class="form-control" name="password">
+		    </div>
+		  </div>
+		  <div class="form-group" style="margin-bottom: 0;">
+		    <div>
+		     <button type="submit" class="btn">Login</button>
+		    </div>
+		  </div>
+		</form>
+	  </div>
+	  <div class="modal-footer">
+	    <a type="button" href="/register" target="_blank" class="btn btn-blue">Create New Account</a>
+	    <button type="/forgot-password" class="btn btn-blue">Forget Your Password?</button>
+	  </div>
+	</div>
+</div>
+
+<!-- The Modal -->
+<div id="emailModal" class="modal">
+
+  <!-- Modal content -->
+    <div class="modal-content">
+	  <div class="modal-header">
+	    <span class="close">&times;</span>
+	    <h2 class="no-top-margin no-bottom-margin">Newsletter Sign Up</h2>
+	  </div>
+	  <div class="modal-body" style="text-align: center;">
+		<form role="form" action="/email-list.php" method="POST">
+		  <input style="width: 95%;" type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address">
+		  <button type="submit" class="btn btn-default">SUBMIT</button>
+		</form>
+	  </div>
+	</div>;
+    <script type="text/javascript" src="/js/modal.js"></script>
+	<script type="text/javascript" src="/rating/rating.js"></script>
+	<script>
+        modal();
+        emailModal();
+    </script>
+
+</div>
+
+
+
+
+
+<style>
+/* The Modal (background) */
+#kickstartModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.kickstartmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 650px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+
+<script>
+// Get the modal
+var kickstartModal = document.getElementById('kickstartModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+if (document.cookie.indexOf('visited=true') == -1){
+    kickstartModal.style.display = "block";
+}
+
+$("#clickks").click(function(){
+	kickstartModal.style.display = "none";
+})
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    kickstartModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == kickstartModal) {
+        kickstartModal.style.display = "none";
+    }
+}
+
+var day = 1000*60*60*24;
+var expires = new Date((new Date()).valueOf() + day);
+document.cookie = "visited=true;expires=" + expires.toUTCString();
+</script>
+
+
+<div id="player">
+	<div class="container">
+		<div id="controls">
+			<i class="fa fa-fast-backward" aria-hidden="true"></i>
+			<i id ="playbtn" class="fa fa-play" aria-hidden="true"></i>
+			<i class="fa fa-fast-forward" aria-hidden="true"></i>
+		</div>
+		<div id="player-meta">
+			<div id="player-title">
+				<span id="track-title">&nbsp;</span>
+			</div>
+			<div id="playerbar">
+				<div class="loadcontainer">
+					<div class="loadprogress">
+					</div>
+				</div>
+				<div id="playerprogress">
+				</div>
+			</div>
+			<i class="fa fa-volume-up vol-speaker" aria-hidden="true"></i>
+			<div id="playervolume">
+				<div id="currentvolume">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10566175-1', 'auto');
+  ga('send', 'pageview');
+
+</script>    <script src="/js/custom.js"></script>
+    <script type="text/javascript" src="/pagination/public/js/zebra_pagination.js"></script>
+  </body>
+</html>
