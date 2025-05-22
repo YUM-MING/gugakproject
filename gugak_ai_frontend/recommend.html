@@ -1,0 +1,43 @@
+<!-- recommend.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>추천 결과 - 국악 추천 시스템</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; text-align: center; margin-top: 50px; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background-color: #f5f5f5;
+      margin: 10px auto;
+      padding: 15px;
+      width: 400px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    li:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎼 추천된 곡 목록</h2>
+  <ul id="recommendation-list">
+    <li onclick="goToPlayerPage('곡1')">🎵 곡명 1 - 가야금</li>
+    <li onclick="goToPlayerPage('곡2')">🎵 곡명 2 - 대금</li>
+    <li onclick="goToPlayerPage('곡3')">🎵 곡명 3 - 해금</li>
+    <li onclick="goToPlayerPage('곡4')">🎵 곡명 4 - 피리</li>
+    <li onclick="goToPlayerPage('곡5')">🎵 곡명 5 - 장구</li>
+  </ul>
+
+  <script>
+    function goToPlayerPage(title) {
+      // player.html로 곡명을 쿼리파라미터로 넘김
+      window.location.href = `player.html?song=${encodeURIComponent(title)}`;
+    }
+  </script>
+
+</body>
+</html>
